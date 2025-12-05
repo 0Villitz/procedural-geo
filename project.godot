@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Segfault_7"
+config/name="procedural-geo"
 run/main_scene="uid://cnvapk3ti8t1u"
 config/features=PackedStringArray("4.5", "Forward Plus")
 boot_splash/show_image=false
