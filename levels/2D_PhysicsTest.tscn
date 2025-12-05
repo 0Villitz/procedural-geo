@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnvapk3ti8t1u"]
+
+[ext_resource type="PackedScene" uid="uid://sdmb4ljgqafd" path="res://assets/2d/wall.tscn" id="1_dpg4c"]
+[ext_resource type="PackedScene" uid="uid://50pc46bl0j7o" path="res://assets/2d/ball.tscn" id="2_kx6k2"]
+[ext_resource type="PackedScene" uid="uid://6tgagopxwhaj" path="res://assets/2d/background_2d_test.tscn" id="3_kx6k2"]
+
+[node name="2dPhysicsTest" type="Node2D"]
+
+[node name="Wall" parent="." instance=ExtResource("1_dpg4c")]
+position = Vector2(556.00006, 530.00006)
+rotation = -1.0471976
+
+[node name="Wall2" parent="." instance=ExtResource("1_dpg4c")]
+position = Vector2(200, 782)
+rotation = -0.5235988
+
+[node name="Wall3" parent="." instance=ExtResource("1_dpg4c")]
+position = Vector2(1385, 517.00006)
+rotation = -2.0943952
+
+[node name="Wall4" parent="." instance=ExtResource("1_dpg4c")]
+position = Vector2(1749, 788)
+rotation = 3.6651917
+
+[node name="Wall5" parent="." instance=ExtResource("1_dpg4c")]
+position = Vector2(477, 998)
+rotation = -1.5707964
+
+[node name="Wall6" parent="." instance=ExtResource("1_dpg4c")]
+position = Vector2(965, 1000)
+rotation = -1.5707964
+
+[node name="Wall7" parent="." instance=ExtResource("1_dpg4c")]
+position = Vector2(1467, 1003)
+rotation = -1.5707964
+
+[node name="Ball" parent="." instance=ExtResource("2_kx6k2")]
+position = Vector2(713, 225)
+
+[node name="Ball2" parent="." instance=ExtResource("2_kx6k2")]
+position = Vector2(1236, 415)
+
+[node name="Ball3" parent="." instance=ExtResource("2_kx6k2")]
+position = Vector2(1344, 161)
+
+[node name="Background2dTest" parent="." instance=ExtResource("3_kx6k2")]
+position = Vector2(960, 540)
+scale = Vector2(15, 8.435)

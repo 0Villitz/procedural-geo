@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://6tgagopxwhaj"]
+
+[ext_resource type="Texture2D" uid="uid://dltmktcconawv" path="res://raw_assets/SBS_Noise_Pack_128px/128x128/Vein/Vein_05-128x128.png" id="1_myjn0"]
+
+[node name="Background2dTest" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.17522272, 0.2700762, 0.35738832, 1)
+z_index = -1000
+texture = ExtResource("1_myjn0")

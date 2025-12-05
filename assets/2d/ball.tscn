@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://50pc46bl0j7o"]
+
+[ext_resource type="Texture2D" uid="uid://csn0rrdtokbs7" path="res://raw_assets/SBS_Tiny_Platformer_Pack/Individual Tiles/Colored/Blue/Colored-Blue_01-32x32-097.png" id="1_j81nx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u2yne"]
+radius = 25.0
+
+[node name="Ball" type="RigidBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_u2yne")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_j81nx")

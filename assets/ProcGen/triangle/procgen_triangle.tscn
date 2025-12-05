@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://tn2rutaav5nf"]
+
+[ext_resource type="Script" uid="uid://xny8g7nonr1f" path="res://assets/procgen/triangle/procgen_triangle.gd" id="1_40gvv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_40gvv"]
+vertex_color_use_as_albedo = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_e4f4s"]
+_surfaces = [{
+"aabb": AABB(-1, -1, 0, 2, 2, 1e-05),
+"attribute_data": PackedByteArray(255, 0, 0, 255, 0, 255, 0, 255, 0, 0, 255, 255),
+"format": 34359738383,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 255, 127, 255, 127, 255, 127, 0, 128, 255, 127, 255, 127, 255, 127, 0, 128, 255, 127, 255, 127, 255, 127, 0, 128)
+}]
+
+[node name="ProcgenTriangle" type="MeshInstance3D"]
+material_override = SubResource("StandardMaterial3D_40gvv")
+mesh = SubResource("ArrayMesh_e4f4s")
+script = ExtResource("1_40gvv")

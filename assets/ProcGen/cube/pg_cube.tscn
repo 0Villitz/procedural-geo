@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyx83o8vkyxok"]
+
+[ext_resource type="Script" uid="uid://2ptbm4fu4cao" path="res://assets/procgen/cube/pg_cube.gd" id="1_s0ggs"]
+
+[node name="PgCube" type="MeshInstance3D"]
+script = ExtResource("1_s0ggs")

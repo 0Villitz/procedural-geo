@@ -1,0 +1,248 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb8iau4vah66l"]
+
+[ext_resource type="Script" uid="uid://xarjrwpyac2a" path="res://ui/main_menu.gd" id="1_t7e0r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dkrt"]
+bg_color = Color(0.19970244, 0.19970247, 0.19970238, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_t7e0r")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0dkrt")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="CenterContainer2" type="CenterContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/CenterContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Title" type="Label" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "Neuro-Sensory Modulation Device"
+horizontal_alignment = 1
+
+[node name="Title2" type="Label" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Available Neuro-Sensory Modulation Constructs (NSMC):"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Title2" type="Label" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Category I: Mnemonic Performance Tests"
+horizontal_alignment = 1
+
+[node name="Button1" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "NSMC-104: Triple Glyph Alignment"
+alignment = 0
+
+[node name="Button2" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "NSMC-064: Quadruple Glyph Alignment"
+alignment = 0
+
+[node name="Button3" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "NSMC-021: Hazard Detection Grid"
+alignment = 0
+
+[node name="Button5" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "NSMC-053: Visual Recall Test"
+alignment = 0
+
+[node name="Button4" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "NSMC-039: Binary Cell Value Toggling"
+alignment = 0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Title2" type="Label" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Category II: Title"
+horizontal_alignment = 1
+
+[node name="Button1" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "NSMC-XXX: Title"
+alignment = 0
+
+[node name="Button2" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "NSMC-XXX: Title
+"
+alignment = 0
+
+[node name="Button3" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "NSMC-XXX: Title
+"
+alignment = 0
+
+[node name="Button5" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "NSMC-XXX: Title
+"
+alignment = 0
+
+[node name="Button4" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "NSMC-XXX: Title
+"
+alignment = 0
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Title2" type="Label" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Category III: Title"
+horizontal_alignment = 1
+
+[node name="Button1" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "NSMC-XXX: Title
+"
+alignment = 0
+
+[node name="Button2" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "NSMC-XXX: Title
+"
+alignment = 0
+
+[node name="Button3" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "NSMC-XXX: Title
+"
+alignment = 0
+
+[node name="Button5" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "NSMC-XXX: Title
+"
+alignment = 0
+
+[node name="Button4" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "NSMC-XXX: Title
+"
+alignment = 0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="Title2" type="Label" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Category IV: Title"
+horizontal_alignment = 1
+
+[node name="Button1" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "NSMC-XXX: Title
+"
+alignment = 0
+
+[node name="Button2" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "NSMC-XXX: Title
+"
+alignment = 0
+
+[node name="Button3" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "NSMC-XXX: Title
+"
+alignment = 0
+
+[node name="Button5" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "NSMC-XXX: Title
+"
+alignment = 0
+
+[node name="Button4" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "NSMC-XXX: Title
+"
+alignment = 0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="Title2" type="Label" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+text = "Category V: Title"
+horizontal_alignment = 1
+
+[node name="Button1" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+text = "NSMC-XXX: Title"
+alignment = 0
+
+[node name="Button2" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+text = "NSMC-XXX: Title"
+alignment = 0
+
+[node name="Button3" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+text = "NSMC-XXX: Title"
+alignment = 0
+
+[node name="Button5" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+text = "NSMC-XXX: Title"
+alignment = 0
+
+[node name="Button4" type="Button" parent="PanelContainer/MarginContainer/CenterContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+text = "NSMC-XXX: Title"
+alignment = 0

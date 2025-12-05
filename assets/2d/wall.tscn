@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://sdmb4ljgqafd"]
+
+[ext_resource type="Texture2D" uid="uid://celycenysrdfd" path="res://icon.svg" id="1_5knji"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2nefc"]
+size = Vector2(100, 500)
+
+[node name="Wall" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2nefc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.24409267, 0.24409267, 0.24409267, 1)
+scale = Vector2(0.785, 3.915)
+texture = ExtResource("1_5knji")

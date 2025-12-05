@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dpijcowy2qs5p"]
+
+[ext_resource type="Shader" uid="uid://djl7ix8hya817" path="res://shaders/spatial/test_shader_01/gridgenerator.gdshader" id="1_luy5k"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_luy5k")

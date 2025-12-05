@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dkvfkxa6xrwt1"]
+
+[node name="ShaderCanvas" type="Node2D"]

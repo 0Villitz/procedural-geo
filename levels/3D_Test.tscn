@@ -1,0 +1,60 @@
+[gd_scene load_steps=11 format=3 uid="uid://ddrniwyhtatrr"]
+
+[ext_resource type="Material" uid="uid://dpijcowy2qs5p" path="res://Shaders/spatial/test_shader_01/test_shader_01_mat.tres" id="1_52b30"]
+[ext_resource type="Shader" uid="uid://c7tx7at3mmd1v" path="res://Shaders/Sky/TestSceneSky_01.gdshader" id="2_21bqo"]
+[ext_resource type="PackedScene" uid="uid://tn2rutaav5nf" path="res://assets/procgen/triangle/procgen_triangle.tscn" id="3_g81nl"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_23dom"]
+material = ExtResource("1_52b30")
+subdivide_width = 10
+
+[sub_resource type="BoxMesh" id="BoxMesh_b6ilq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g81nl"]
+shader = ExtResource("2_21bqo")
+
+[sub_resource type="Sky" id="Sky_4n0sy"]
+sky_material = SubResource("ShaderMaterial_g81nl")
+
+[sub_resource type="Environment" id="Environment_cb4v6"]
+background_mode = 2
+sky = SubResource("Sky_4n0sy")
+ambient_light_source = 3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_21bqo"]
+vertex_color_use_as_albedo = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_fmk7l"]
+_surfaces = [{
+"aabb": AABB(-1, -1, 0, 2, 2, 1e-05),
+"attribute_data": PackedByteArray(255, 0, 0, 255, 0, 255, 0, 255, 0, 0, 255, 255),
+"format": 34359738383,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 255, 127, 255, 127, 255, 127, 0, 128, 255, 127, 255, 127, 255, 127, 0, 128, 255, 127, 255, 127, 255, 127, 0, 128)
+}]
+
+[node name="3dTest" type="Node3D"]
+
+[node name="Plane_01" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_52b30")
+mesh = SubResource("PlaneMesh_23dom")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8287696, 0)
+mesh = SubResource("BoxMesh_b6ilq")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3078043, 1.8263854, 0.50609994)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cb4v6")
+
+[node name="OmniLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.9957279, -0.066362604, -0.064202115, 0, -0.6953109, 0.7187091, -0.092335835, -0.7156387, -0.69234043, 1.0393682, 1.073756, 0.5380378)
+
+[node name="ProcgenTriangle" parent="." instance=ExtResource("3_g81nl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1158805, 0, -0.585582)
+material_override = SubResource("StandardMaterial3D_21bqo")
+mesh = SubResource("ArrayMesh_fmk7l")
